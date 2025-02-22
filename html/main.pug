@@ -1,0 +1,22 @@
+mixin topic-card(type, topic, image)
+  .main__card
+    .main__card-img 
+      img.main__card-picture(src=`../media/png/${image}`, alt='Изображение')
+    .main__card-type=type 
+    .main__card-topic=topic
+    .main__card-user
+      span.main__card-author Niek Bove
+      span.main__card-date April 8          
+      span.main__card-views 20183K Views
+    .main__card-description Structured gripped tape invisible moulded cups for support firm hold strong powermesh front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the front full button...
+main
+  .main
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '1.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '2.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '3.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '4.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '5.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '6.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '7.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '8.png')
+    +topic-card('Lifestyle', 'The Look: Perfect Balance', '9.png')
