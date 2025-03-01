@@ -8,7 +8,6 @@
     margin-top: 1.875rem;
 }
 .main__card {
-    width: 25%;
     margin: 0 5% 2rem 0;
 }
 .main__card-img {
@@ -70,4 +69,40 @@
     display: block;
     margin-right: 0.3125rem;
     margin-left: 0.3125rem;
+}
+@media (min-width: 320px) {
+    .main {
+        margin: 1.875rem 2% 0 2%;
+    }
+    .main__card {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}
+@media (min-width: 600px) {
+    .main {
+        margin: 1.875rem 0 0 4%;
+    }
+    .main__card {
+        width: 45%;
+        margin: 0 5% 2rem 0;
+    }
+    .main__card::nth-child(even) {
+        margin-right: 0;
+    }
+}
+@media (min-width: 1024px) {
+    .main {
+        margin: 1.875rem 0 0 0;
+        justify-content: center;
+    }
+    .main__card {
+        width: 25%;
+    }
+    .main__card::nth-child(even) {
+        margin-right: 5%;
+    }
+    .main__card::nth-child(3n+2) {
+        margin-right: 0;
+    }
 }
