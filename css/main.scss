@@ -1,0 +1,109 @@
+.main {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1.875rem;
+    &__card {
+        margin: 0 5% 2rem 0;
+        &-img {
+            width: 100%;
+        }
+        &-picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &-type {
+            font-weight: 700;
+            color: #EB0028;
+            font-size: 0.625rem;
+            margin: 0.5rem 0 0.8rem 0;
+        }
+        &-topic {
+            font-weight: 700;
+            font-size: 1.125rem;
+            line-height: 1.25rem;
+            margin-bottom: 0.625rem;
+        }
+        &-description {
+            font-weight: 400;
+            font-size: 0.625rem;
+            line-height: 1.125rem;
+            color: #929292;
+        }
+        &-user {
+            font-size: 0.625rem;
+            color: #9B9B9B;
+            display: flex;
+            margin-bottom: 0.625rem;
+        }
+        &-author {
+            font-weight: 500;
+            color: #000;
+            margin-right: 0.3125rem;
+        }
+        &-date {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: '';
+                background-color: #D7D7D7;
+                width: 0.1875rem;
+                height: 0.1875rem;
+                border-radius: 50%;
+                display: block;
+                margin-right: 0.3125rem;
+            }
+            &::after {
+                content: '';
+                background-color: #D7D7D7;
+                width: 0.1875rem;
+                height: 0.1875rem;
+                border-radius: 50%;
+                display: block;
+                margin-right: 0.3125rem;
+                margin-left: 0.3125rem;
+            }
+        }
+
+    }
+}
+@media (min-width: 320px) {
+    .main {
+        margin: 1.875rem 2% 0 2%;
+        &__card {
+            width: 100%;
+            margin: 0 0 2rem 0;
+        }
+    }
+}
+@media (min-width: 600px) {
+    .main {
+        margin: 1.875rem 0 0 4%;
+        &__card {
+            width: 45%;
+            margin: 0 5% 2rem 0;
+            &::nth-child(even) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .main {
+        margin: 1.875rem 0 0 0;
+        justify-content: center;
+        &__card {
+            width: 25%;
+            &::nth-child(even) {
+                margin-right: 5%;
+            }
+            &::nth-child(3n+2) {
+                margin-right: 0;
+            }
+        }
+    }
+}
