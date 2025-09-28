@@ -55,6 +55,11 @@
     &__select {
         cursor: pointer;
         box-sizing: border-box;
+        &:hover &-body {
+            opacity: 1;
+            visibility: visible;
+            height: max-content;
+        }
         &-body {
             width: max-content;
             opacity: 0;
@@ -70,6 +75,41 @@
             margin-left: 0.28rem;
             &-img {
                 transform: translate(0,-25%);
+            }
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #E9E9E9;
+            padding-bottom: 0.44rem;
+            margin-bottom: 0.44rem;
+            font-size: 0.72rem;
+            line-height: 0.72rem;
+            font-weight: 400;
+            &::after {
+                content: "";
+                display: block;
+                background-image: url(../media/svg/Select-icon.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+                width: 0.35rem;
+                height: 0.185rem;
+                transform: rotate(270deg);
+                margin-left: 3.33rem;
+            }
+            &:hover &-text{
+                opacity: 0.6;
+                transform: translateX(0.44rem);
+            }
+            &:last-child {  
+                margin-bottom: 0;
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+            &-text{
+                transition: 0.5s ease-in-out;
             }
         }
     }
