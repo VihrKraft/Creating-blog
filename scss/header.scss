@@ -3,35 +3,35 @@
     font-weight: 500;
     font-style: normal;
     background-color: white;
-    &__logo {
-        width: 10rem;
-        opacity: 0.8; 
-        transition: 0.8s ease-in-out;
-    }
-    &__top {
-        display: flex;
-        border-bottom: solid 0.05rem #E9E9E9;
-        padding: 1.61rem 0 1.44rem 0;
-        align-items: center;
-        &_right {
-            display: flex;
-            align-items: center;
-            position: relative;
+        &__logo {
             width: 10rem;
+            opacity: 0.8; 
+            transition: 0.8s ease-in-out;
         }
-    }
-    &__search {
-        background: url("../media/svg/Search.svg") center/cover no-repeat;
-        box-sizing: border-box;
-        border: none;
-        width: 0.89rem;
-        height: 0.89rem;
-        background-color: white;
-        cursor: pointer;
-        position: absolute;
-        margin-left: 0.5rem;
-        right: 0;
-    }
+        &__top {
+            display: flex;
+            border-bottom: solid 0.05rem #E9E9E9;
+            padding: 1.61rem 0 1.44rem 0;
+            align-items: center;
+            &_right {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 10rem;
+            }
+        }
+        &__search {
+            background: url("../media/svg/Search.svg") center/cover no-repeat;
+            box-sizing: border-box;
+            border: none;
+            width: 0.89rem;
+            height: 0.89rem;
+            background-color: white;
+            cursor: pointer;
+            position: absolute;
+            margin-left: 0.5rem;
+            right: 0;
+        }
     &__text-field {
         font-size: 0.75rem;
         color: #4b4b4b;
@@ -43,6 +43,10 @@
         visibility: hidden;
         outline: none;
         transition: 0.3s ease-in-out;
+        &.active {
+            width: 85%;
+            visibility: visible;
+        }
     }
     &__bottom {
         border-bottom: solid 0.05rem #E9E9E9;
