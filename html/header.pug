@@ -13,19 +13,20 @@ mixin custom-select(name)
       +select-item('Share Buttons')
       +select-item('Gallery Post')
       +select-item('Video Post')
-header.header 
-  .header__mobile 
-    .header__mobile-top
-      img.header__logo(src=require('../media/svg/Logotype.svg'))
-      .header__close-btn
-        span.header__mobile-cross
-    .header__bottom_mobile
-      +custom-select('Demos')
-      +custom-select('Post')
-      +custom-select('Features')
-      +custom-select('Categories')
-      +custom-select('Shop')
-      a.header__link Buy Now
+header.header
+  .header_container
+    .header__mobile 
+      .header__mobile-top
+        img.header__logo(src=require('../media/svg/Logotype.svg'))
+        .header__close-btn
+          span.header__mobile-cross
+      .header__bottom_mobile
+        +custom-select('Demos')
+        +custom-select('Post')
+        +custom-select('Features')
+        +custom-select('Categories')
+        +custom-select('Shop')
+        a.header__link Buy Now
 
 
   .header__top
