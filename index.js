@@ -10,21 +10,19 @@ document.addEventListener('DOMContentLoaded', function () {
     let windowWidth = document.documentElement.clientWidth;
     let headerHeight = header.clientHeight;
 
-    // if (windowWidth>=1024) {
-        window.onscroll=changeHeader;
-        let lastScroll = 0;
-        function changeHeader () {
-            let top = document.documentElement.scrollTop;
-            if (lastScroll>top) {
-                header.style.top = '0';
-            } else {
-                if (window.pageYOffset>200) {
-                    header.style.top = `-${headerHeight}px`;
-                }
+    window.onscroll=changeHeader;
+    let lastScroll = 0;
+    function changeHeader () {
+        let top = document.documentElement.scrollTop;
+        if (lastScroll>top) {
+            header.style.top = '0';
+        } else {
+            if (window.pageYOffset>200) {
+                header.style.top = `-${headerHeight}px`;
             }
-            lastScroll = top;
         }
-    // }
+        lastScroll = top;
+    }
 
     let headerBurgerButton = document.querySelector('.header__burger')
     let headerLogo = document.querySelector('.header__top').querySelector('.header__logo')
