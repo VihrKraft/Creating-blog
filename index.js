@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let windowWidth = document.documentElement.clientWidth;
     let headerHeight = header.clientHeight;
 
-    if (windowWidth>1024) {
+    // if (windowWidth>=1024) {
         window.onscroll=changeHeader;
         let lastScroll = 0;
         function changeHeader () {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             lastScroll = top;
         }
-    }
+    // }
 
     let headerBurgerButton = document.querySelector('.header__burger')
     let headerLogo = document.querySelector('.header__top').querySelector('.header__logo')
@@ -32,13 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let headerMobile = document.querySelector(".header__mobile")
     let headerCloseButton = document.querySelector('.header__close-btn')
     let body = document.querySelector('body')
-
-    headerBurgerButton.addEventListener('click', function () {
-        headerLogo.classList.add('active');
-        headerMenuMobile.parentElement.classList.add('active');
-        body.classList.add('active');
-        headerContainer.classList.add('active')
-    })
+    let headerContainer = document.querySelector('.header_container')
 
 
     function closingBurgerMenu() {
@@ -48,10 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
         headerContainer.classList.remove('active')
     }
 
+    headerBurgerButton.addEventListener('click', function () {
+        headerLogo.classList.add('active');
+        headerMenuMobile.parentElement.classList.add('active');
+        body.classList.add('active');
+        headerContainer.classList.add('active')
+    })
 
     headerCloseButton.addEventListener('click', closingBurgerMenu);
-
-    headerContainer = document.querySelector('.header_container')
 
     headerContainer.addEventListener( 'click', (e) => {
         const withinBoundaries = e.composedPath().includes(headerMobile);
